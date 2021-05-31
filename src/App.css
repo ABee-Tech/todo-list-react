@@ -1,38 +1,112 @@
-.App {
-  text-align: center;
+body *, h1, p {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app {
+  background-image: linear-gradient(to bottom, #f1c40f, #e74c3c);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+  height: 70%;
+  width: 80%;
+  background-color: #fff;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.addtodo {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid gray;
+}
+
+.addtodo input {
+  height: 60%;
+  width: 50%;
+  border: 1px solid gray;
+  padding: 5px;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+.addtodo button {
+  margin-left: 15px;
+  border: none;
+  height: 60%;
+  background-color: #f1c40f;
+  width: 20%;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+.todos {
+  padding: 20px;
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.todos .item {
+  cursor: pointer;
+  width: 80%;
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid gray;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todos .crossbutton {
+  background-color: rgb(236, 53, 53);
+  color: #fff;
+  height: 25px;
+  width: 25px;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.todos .fa-times {
+  font-size: 18px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todos .item:hover {
+  background-color: aquamarine;
+}
+
+.todos .title {
+  display: flex;
+  align-items: center;
+}
+
+.todos .title input[type="checkbox"] {
+  height: 25px;
+  width: 25px;
+}
+
+.todos .title p {
+  margin-left: 15px;
+  font-size: 20px;
 }
